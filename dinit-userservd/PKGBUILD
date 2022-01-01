@@ -1,1 +1,34 @@
+pkgname=dinit-userservd
+pkgver=0.1.0
+pkgrel=1
+epoch=
+pkgdesc="user dinit instance spawner + manager daemon."
+arch=('any')
+url="https://github.com/chimera-linux/dinit-userservd/"
+license=('BSD')
+groups=('dinit-system')
+depends=('dinit' 'elogind')
+makedepends=('meson')
+optdepends=()
+provides=('dinit-userservd')
+conflicts=('dinit-userservd-git')
+install='dinit-userservd.install'
+changelog=
+source=("https://codeload.github.com/XynonWasTaken/dinit-userservd/zip/refs/tags/v0.1.0")
+sha256sums=('bd686ee117b9f1133e80077ec7a5f98736c0a4974b395e99ad7f3bde106d349')
 
+prepare() {
+    cd "$pkgname-$pkgver"
+    mkdir -p build
+}
+
+build() {
+    cd "$pkgname-$pkgver"
+    meson --prefix=/usr --buildtype=plain ./ ./build
+    meson compile -C build
+}
+
+package() {
+    cd "$pkgname-$pkgver"
+    meson install -C build --destdir "$pkgdir"
+}
