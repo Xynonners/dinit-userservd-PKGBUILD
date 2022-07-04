@@ -14,7 +14,7 @@ provides=('dinit-userservd')
 conflicts=('dinit-userservd')
 install='dinit-userservd.install'
 changelog=
-source=(git+"https://github.com/XynonWasTaken/dinit-userservd")
+source=(git+"https://github.com/chimera-linux/dinit-userservd")
 sha256sums=('SKIP')
 
 prepare() {
