@@ -1,5 +1,5 @@
 pkgname=dinit-userservd
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 epoch=
 pkgdesc="user dinit instance spawner + manager daemon."
@@ -14,8 +14,8 @@ provides=('dinit-userservd')
 conflicts=('dinit-userservd-git')
 install='dinit-userservd.install'
 changelog=
-source=("https://codeload.github.com/XynonWasTaken/dinit-userservd/zip/refs/tags/v0.1.0")
-sha256sums=('bd686ee117b9f1133e80077ec7a5f98736c0a4974b395e99ad7f3bde106d349')
+source=("https://codeload.github.com/XynonWasTaken/dinit-userservd/zip/refs/tags/v0.1.1")
+sha256sums=('9492c4e5feff61484ee68f5e14da1e3a122b0eafbb7c49851ef6c19805ea9ccb')
 
 prepare() {
     cd "$pkgname-$pkgver"
