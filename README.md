@@ -1,3 +1,3 @@
 # dinit-userservd-PKGBUILD
 
-Where PKGBUILDs for artix specific dinit-userservd fork (https://github.com/XynonWasTaken/dinit-userservd) are stored.
+Where PKGBUILDs for dinit-userservd on artix https://github.com/chimera-linux/dinit-userservd are stored.
